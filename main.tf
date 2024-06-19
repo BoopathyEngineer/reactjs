@@ -1,11 +1,9 @@
 provider "aws" {
-  alias = "us-east-1"
   region = "us-east-1"
 }
 
 resource "aws_instance" "ubuntu" {
-  ami = var.ami_value_us_east_1
-  instance_type =var.instance_type
-  key_name = var.key_name
-  provider = aws.us-east-1
+  ami="ami-08a0d1e16fc3f61ea"
+  instance_type = "t2.nano"
+  key_name = "github"
 }
